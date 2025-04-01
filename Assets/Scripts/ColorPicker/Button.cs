@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Button : MonoBehaviour, Clickable
 {
+    [SerializeField] Color materialColor;
+    [SerializeField] float needAmount;
+    [SerializeField] Bucket bucket;
+    [SerializeField] Pourer pourer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +22,9 @@ public class Button : MonoBehaviour, Clickable
     }
 
     public void OnClick() {
-        
+        bucket.SetColor(materialColor);
+        bucket.setNeededAmount(needAmount);
+        pourer.SetLiquidColor(materialColor);
     }
 
     public void OnRelease() {
