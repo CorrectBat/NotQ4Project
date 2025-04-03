@@ -1,38 +1,37 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Duck : MonoBehaviour, Clickable
+public class DuckMovement : MonoBehaviour, Clickable
 {
     private bool mouseHeld;
     private Vector3 offSet;
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(mouseHeld) {
             Drag();
-        } 
+        }
     }
 
     void OnMouseOver()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0)){
             OnClick();
-        } else if(Input.GetKeyUp(KeyCode.Mouse0)){
-            OnRelease();
         }
     }
 
     void Drag() {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePosition + offSet;
+        if(Input.GetKeyUp(KeyCode.Mouse0)){
+            OnRelease();
+        }
     }
 
     public void OnClick() {
@@ -45,3 +44,4 @@ public class Duck : MonoBehaviour, Clickable
         mouseHeld = false;
     }
 }
+
