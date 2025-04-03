@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,5 +43,17 @@ public class Bucket : MonoBehaviour
 
     public void SetColor(Color color) {
         liquid.GetComponent<SpriteRenderer>().color = color;
+    }
+
+    public bool hasLiquid() {
+        return filledAmount > 0;
+    }
+
+    public float GetScore() {
+        if(Math.Abs((neededAmount-filledAmount)/filledAmount) < .01) {
+            return 100;
+        }  else {
+            return (neededAmount-filledAmount)/filledAmount*100;
+        }
     }
 }

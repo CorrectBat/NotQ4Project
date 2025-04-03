@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,12 +23,18 @@ public class Button : MonoBehaviour, Clickable
     }
 
     public void OnClick() {
-        bucket.SetColor(materialColor);
-        bucket.setNeededAmount(needAmount);
-        pourer.SetLiquidColor(materialColor);
+        if(CanPress()) {
+            bucket.SetColor(materialColor);
+            bucket.setNeededAmount(needAmount);
+            pourer.SetLiquidColor(materialColor);
+        }
     }
 
     public void OnRelease() {
 
+    }
+
+    public bool CanPress() {
+        return !bucket.hasLiquid();
     }
 }
