@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorStation : MonoBehaviour
+public class TailArea : MonoBehaviour
 {
+    Queue<Duck> ducks;
+    Duck currentDuck;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,11 @@ public class ColorStation : MonoBehaviour
         
     }
 
-    
+    void AddDuck(Duck duck) {
+        ducks.Enqueue(duck);
+    }
+
+    void PollDuck() {
+        currentDuck = ducks.Dequeue();
+    }
 }
