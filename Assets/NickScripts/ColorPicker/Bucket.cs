@@ -10,22 +10,29 @@ public class Bucket : MonoBehaviour
     [SerializeField] float fillFactor;
     [SerializeField] Pourer pourer;
     private Transform liquid;
+    private SpriteRenderer liquidSprite;
     private Transform needLine;
 
     // Start is called before the first frame update
     void Start()
     {
         liquid = transform.GetChild(0).transform;
+        liquidSprite = liquid.GetChild(0).GetComponent<SpriteRenderer>();
         needLine = transform.GetChild(1).transform;
+        Debug.Log(needLine);
         liquid.transform.localScale = new Vector3(1, 0, 1);
         liquid.gameObject.SetActive(true);
+    }
+
+    public float GetAmountFilled() {
+        return filledAmount;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(pourer.IsPouring() && filledAmount <=1) {
-            liquid.transform.localScale = new Vector3(1, filledAmount*2, 1);
+            liquid.transform.localScale = new Vector3(1, filledAmount*146, 1);
         }
 
         if(neededAmount < filledAmount) {
@@ -34,7 +41,8 @@ public class Bucket : MonoBehaviour
     }
     public void setNeededAmount(float amount) {
         neededAmount = amount;
-        needLine.localPosition = new Vector3(0, amount-0.5f, 0);
+        needLine = transform.GetChild(1).transform;
+        needLine.localPosition = new Vector3(0, (float)(amount*.3293 -.3543), 0);
     }
 
     public void fill(float amount) {
@@ -42,7 +50,7 @@ public class Bucket : MonoBehaviour
     }
 
     public void SetColor(Color color) {
-        liquid.GetComponent<SpriteRenderer>().color = color;
+        liquidSprite.color = color;
     }
 
     public bool hasLiquid() {

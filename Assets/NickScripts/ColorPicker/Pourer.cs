@@ -1,20 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pourer : MonoBehaviour, Clickable
 {
-    private float pourProgress;
     private bool mouseHeld;
-    private Vector3 initialMousePosition;
-    private Vector3 currentMousePosition;
-    private Vector3 startPosition;
-    private float xDistance;
-    private float yDistance;
     private bool isPouring;
-    private Color liquidColor;
-    private GameObject corner;
-    private float pourFactor = 2;
+    private float pourFactor = 0.1f;
     [SerializeField] GameObject liquidSprite;
     [SerializeField] Vector3 finalPosition;
     [SerializeField] float rotateAmount;
@@ -23,11 +16,7 @@ public class Pourer : MonoBehaviour, Clickable
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
-        xDistance = finalPosition.x - startPosition.x;
-        yDistance = finalPosition.y - startPosition.y;
         bucket.setNeededAmount(.7f);
-        corner = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -43,48 +32,24 @@ public class Pourer : MonoBehaviour, Clickable
     }
 
     void OnHeld() {
-        currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pourProgress = (currentMousePosition.x-initialMousePosition.x)/maxMouseDrag;
         Pour();
     }
 
     void Pour() {
-
-        if(pourProgress > 1) {
-            pourProgress = 1;
-        } else if (pourProgress < 0) {
-            pourProgress = 0;
-        }
-        Vector3[] corners = GetCorners();
-
-        liquidSprite.transform.position = new Vector2(corner.transform.position.x,
-                                                      corner.transform.position.y-2);
-
-        transform.position = new Vector3((startPosition.x+(xDistance*pourProgress)),
-                                          startPosition.y+(yDistance*pourProgress), 0);
-        transform.eulerAngles = new Vector3(0, 0, rotateAmount*pourProgress);
-
-
-        if(pourProgress >= .4) {
-            bucket.fill((pourProgress-.4f)*pourFactor*Time.deltaTime);
-            liquidSprite.SetActive(true);
-        } else {
-            liquidSprite.SetActive(false);
-        }
+        bucket.fill((float)Math.Pow(bucket.GetAmountFilled()+1, 5)*pourFactor*Time.deltaTime);
+        liquidSprite.SetActive(true);
     }
 
     public void OnClick() {
         Debug.Log("Click");
         mouseHeld = true;
         isPouring = true;
-        initialMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     public void OnRelease() {
         mouseHeld = false;
         isPouring = false;
-        transform.position = startPosition;
-        transform.eulerAngles = new Vector3(0, 0, 0);
+        liquidSprite.SetActive(false);
     }
 
     public bool IsPouring() {
