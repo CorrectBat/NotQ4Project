@@ -167,9 +167,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1791788801547090082, guid: 38f0ed1663fc8ef4dae608eb9f705569, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2168905598819608205, guid: 38f0ed1663fc8ef4dae608eb9f705569, type: 3}
       propertyPath: m_Name
       value: TailStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861830717200903468, guid: 38f0ed1663fc8ef4dae608eb9f705569, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

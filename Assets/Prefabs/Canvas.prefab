@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taill 1
+  m_Text: Taill
 --- !u!1 &605662337550705039
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pirate Hat, Taira
+  m_Text: Accessories
 --- !u!1 &978347309231769216
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -Kasey
+  m_Text: Customer
 --- !u!1 &2969947237931538062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -Kasey
+  m_Text: Customer
 --- !u!1 &3386342041745695286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yellow
+  m_Text: Color
 --- !u!1 &3693268737714713700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1301,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pirate Hat, Taira
+  m_Text: Accessories
 --- !u!1 &4105663348072036079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1686,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taill 1
+  m_Text: Taill
 --- !u!1 &4215696525355544121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taill 1
+  m_Text: Taill
 --- !u!1 &4289509902518671129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2078,7 +2078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -Kasey
+  m_Text: Customer
 --- !u!1 &5003346625738812564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,7 +2236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yellow
+  m_Text: Color
 --- !u!1 &5323862362233938837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,7 +2484,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yellow
+  m_Text: Color
 --- !u!1 &6764200162629269895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2563,7 +2563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taill 1
+  m_Text: Taill
 --- !u!1 &6877071049373483491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,7 +2642,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pirate Hat, Taira
+  m_Text: Accessories
 --- !u!1 &7030239660782075391
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,7 +2899,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pirate Hat, Taira
+  m_Text: Accessories
 --- !u!1 &8246251016048004747
 GameObject:
   m_ObjectHideFlags: 0
@@ -3026,7 +3026,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yellow
+  m_Text: Color
 --- !u!1 &9065425121551483001
 GameObject:
   m_ObjectHideFlags: 0
@@ -3105,4 +3105,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: -Kasey
+  m_Text: Customer
