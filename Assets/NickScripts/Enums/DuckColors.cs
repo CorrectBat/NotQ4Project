@@ -4,7 +4,10 @@ using UnityEngine;
 
 public enum DuckColors
 {
+    green,
     blue,
+    yellow,
     orange,
-    yellow
+    purple,
+    pink
 }

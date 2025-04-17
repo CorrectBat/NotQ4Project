@@ -5,8 +5,11 @@ using UnityEngine;
 public class Duck : MonoBehaviour
 {
     private DuckColors color;
+    private float colorScore;
     private List<ItemNames> items;
+    private float itemScore;
     private TailShapes tailShape;
+    private float tailScore;
     private DuckStage duckStage;
 
     // Start is called before the first frame update
@@ -20,8 +23,14 @@ public class Duck : MonoBehaviour
         duckStage = DuckStage.tail;   
     }
 
-    public void SetColor(DuckColors newColor) {
+    public DuckColors GetColor() {
+        return color;
+    }
+    public void SetColor(DuckColors newColor, float score) {
         color = newColor;
+        Debug.Log(newColor);
+        tailScore = score;
+        Debug.Log(score);
     }
 
     public void AddItem(ItemNames item) {
