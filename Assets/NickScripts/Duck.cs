@@ -33,8 +33,8 @@ public class Duck : MonoBehaviour
         Debug.Log(score);
     }
 
-    public void AddItem(ItemNames item) {
-        items.Add(item);
+    public void AddItems(List<ItemNames> items) {
+        this.items = items;
     }
 
     public void SetTail(TailShapes tail) {
