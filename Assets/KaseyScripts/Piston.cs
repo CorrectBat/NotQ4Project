@@ -57,6 +57,8 @@ public class Piston : MonoBehaviour
             while(piston.transform.position.y < 3.5)
                 piston.transform.position += new Vector3(0, (float)(Time.deltaTime*0.05), 0);
         }
+
+        getScoreTailStation();
     }
 
     void OnMouseOver()
@@ -69,5 +71,12 @@ public class Piston : MonoBehaviour
     public void stopTimeMinigame(){
         done = true;
         speed = 0;
+    }
+
+    public void getScoreTailStation(){
+        int score = 0;
+        if(duck.GetComponent<SpriteRenderer>().sprite == failedDuck){
+            Debug.Log("testing");
+        }
     }
 }

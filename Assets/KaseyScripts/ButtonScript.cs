@@ -15,7 +15,7 @@ public class ButtonScript : MonoBehaviour
                 duck.name = "Duck_tail2";
             } else if (transform.name == "Tail3Button"){
                 duck.name = "Duck_tail3";
-            } 
+            }
         }
     } 
 }

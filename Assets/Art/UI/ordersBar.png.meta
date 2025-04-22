@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 181eac5f972a79647b8908374e946cd9
+guid: 1c2409ef180a63a4692fa35282d7670f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6135675160184233193
-    second: duckthing_0
+      213: -7812462498030139500
+    second: ordersBar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duckthing_0
+      name: ordersBar_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 915
-        height: 50
+        width: 875
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ec18fbcc0c462550800000000000000
-      internalID: 6135675160184233193
+      spriteID: 4974adf00ce849390800000000000000
+      internalID: -7812462498030139500
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      duckthing_0: 6135675160184233193
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
