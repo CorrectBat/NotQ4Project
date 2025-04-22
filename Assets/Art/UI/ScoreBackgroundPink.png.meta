@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ScoreBackgroundPink_0: -7712381414268396782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
