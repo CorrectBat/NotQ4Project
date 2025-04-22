@@ -68,6 +68,8 @@ public class Piston : MonoBehaviour
                 piston.transform.position += new Vector3(0, (float)(Time.deltaTime*0.05), 0);
             
         }
+
+        getScoreTailStation();
     }
 
     void OnMouseOver()
@@ -82,9 +84,17 @@ public class Piston : MonoBehaviour
         speed = 0;
     }
 
+<<<<<<< HEAD
+    public void getScoreTailStation(){
+        int score = 0;
+        if(duck.GetComponent<SpriteRenderer>().sprite == failedDuck){
+            Debug.Log("testing");
+        }
+=======
     public void Empty() {
         duck = null;
         done = false;
         speed = 20;
+>>>>>>> a5bf0d20379a5ae62ff85eed3ae6bdd176c30779
     }
 }
