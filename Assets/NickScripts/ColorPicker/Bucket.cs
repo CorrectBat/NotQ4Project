@@ -7,6 +7,7 @@ public class Bucket : MonoBehaviour
 {
     private float filledAmount = 0;
     private float neededAmount;
+    private DuckColors currColor;
     [SerializeField] float fillFactor;
     [SerializeField] Pourer pourer;
     private Transform liquid;
@@ -49,8 +50,9 @@ public class Bucket : MonoBehaviour
         filledAmount += amount*fillFactor;
     }
 
-    public void SetColor(Color color) {
+    public void SetColor(Color color, DuckColors duckColor) {
         liquidSprite.color = color;
+        currColor = duckColor;
     }
 
     public bool hasLiquid() {
@@ -63,5 +65,14 @@ public class Bucket : MonoBehaviour
         }  else {
             return (neededAmount-filledAmount)/filledAmount*100;
         }
+    }
+
+    public void Empty() {
+        filledAmount = 0;
+        liquid.transform.localScale = new Vector3(1, 0, 1);
+    }
+
+    public DuckColors GetColor() {
+        return currColor;
     }
 }
