@@ -199,7 +199,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &185845150
 RectTransform:
@@ -232,8 +232,9 @@ GameObject:
   - component: {fileID: 330522470}
   - component: {fileID: 330522472}
   - component: {fileID: 330522471}
+  - component: {fileID: 330522473}
   m_Layer: 0
-  m_Name: Customer (1)
+  m_Name: Jenny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,6 +323,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &330522473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330522469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 06000000
+  color: 1
+  shape: 1
 --- !u!1 &427421066
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,8 +719,9 @@ GameObject:
   - component: {fileID: 1351637273}
   - component: {fileID: 1351637275}
   - component: {fileID: 1351637274}
+  - component: {fileID: 1351637276}
   m_Layer: 0
-  m_Name: Customer (4)
+  m_Name: Anna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,6 +810,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1351637276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351637272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 05000000
+  color: 0
+  shape: 1
 --- !u!1 &1374034176
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +836,9 @@ GameObject:
   - component: {fileID: 1374034177}
   - component: {fileID: 1374034179}
   - component: {fileID: 1374034178}
+  - component: {fileID: 1374034180}
   m_Layer: 0
-  m_Name: Customer (5)
+  m_Name: Martin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -894,6 +927,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1374034180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374034176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 00000000
+  color: 2
+  shape: 2
 --- !u!1 &1542982599
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +955,7 @@ GameObject:
   - component: {fileID: 1542982602}
   - component: {fileID: 1542982601}
   - component: {fileID: 1542982604}
+  - component: {fileID: 1542982605}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -928,9 +977,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 185845150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.4966924, y: 0.5}
-  m_AnchorMax: {x: 0.4966924, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 182}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9, y: 184.69}
   m_SizeDelta: {x: 112.16, y: 44.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1542982601
@@ -976,7 +1025,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1542982602}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 72d3ff95b06296349be5b22be8805f00, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1542982602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1089,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonToReveal: {fileID: 1542982599}
-  revealDelay: 7
+  revealDelay: 6
+--- !u!114 &1542982605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542982599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d3ff95b06296349be5b22be8805f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orders: []
 --- !u!1 &1591469449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,8 +1149,9 @@ GameObject:
   - component: {fileID: 1649908206}
   - component: {fileID: 1649908208}
   - component: {fileID: 1649908207}
+  - component: {fileID: 1649908209}
   m_Layer: 0
-  m_Name: Customer (3)
+  m_Name: Robert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,6 +1240,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1649908209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649908205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 02000000
+  color: 2
+  shape: 0
 --- !u!1 &1653376139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,8 +1266,9 @@ GameObject:
   - component: {fileID: 1653376142}
   - component: {fileID: 1653376141}
   - component: {fileID: 1653376140}
+  - component: {fileID: 1653376143}
   m_Layer: 0
-  m_Name: Customer
+  m_Name: Jason
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,7 +1287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleSpeed: 1
-  targetScale: 10
+  targetScale: 8
 --- !u!212 &1653376141
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1266,6 +1357,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1234141017}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1653376143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653376139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 0000000001000000
+  color: 0
+  shape: 0
+--- !u!1 &1661246629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661246630}
+  - component: {fileID: 1661246632}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661246630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661246629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7524078, y: -0.8665998, z: 346.73303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661246632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661246629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 
+  color: 0
+  shape: 0
 --- !u!1 &1919745228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,8 +1516,9 @@ GameObject:
   - component: {fileID: 1920755252}
   - component: {fileID: 1920755254}
   - component: {fileID: 1920755253}
+  - component: {fileID: 1920755255}
   m_Layer: 0
-  m_Name: Customer (2)
+  m_Name: Michael
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1453,6 +1607,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1920755255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920755251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 0100000003000000
+  color: 1
+  shape: 2
 --- !u!1 &1950516755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1550,8 +1719,9 @@ GameObject:
   - component: {fileID: 2038249677}
   - component: {fileID: 2038249679}
   - component: {fileID: 2038249678}
+  - component: {fileID: 2038249680}
   m_Layer: 0
-  m_Name: Customer (6)
+  m_Name: Anthony
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,6 +1810,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2038249680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038249676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a7e45d88effc24ba6e79b01175dda7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReq: 020000000100000003000000
+  color: 1
+  shape: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1649,3 +1834,4 @@ SceneRoots:
   - {fileID: 185845150}
   - {fileID: 1234141017}
   - {fileID: 1591469450}
+  - {fileID: 1661246630}
