@@ -15,4 +15,8 @@ public class SwitchArea : MonoBehaviour
     {
         
     }
+
+    void Switch(GameObject area) {
+
+    }
 }

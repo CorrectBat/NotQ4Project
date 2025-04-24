@@ -23,7 +23,9 @@ public class Areas : MonoBehaviour
         }
     }
 
-    public void SwitchOn(GameObject area) {
+    public void Switch(GameObject area) {
+        Debug.Log("Click!");
+        SwitchOff();
         area.SetActive(true);
     }
 }
