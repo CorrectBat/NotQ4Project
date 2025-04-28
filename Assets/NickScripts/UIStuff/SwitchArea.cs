@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwitchArea : MonoBehaviour
 {
+    [SerializeField] Areas areaManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class SwitchArea : MonoBehaviour
     }
 
     void Switch(GameObject area) {
-
+        areaManager.Switch(area);
     }
 }
