@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    public string Name;
+    public bool isReadyToOrder;
     public Order order;
 
     // Update is called once per frame
-    public string GetName()
-    {
-        return name;
-    }
     public Order GetOrder()
     {
         return order;
