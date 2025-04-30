@@ -69,5 +69,6 @@ public class AccessoryItem : MonoBehaviour, Clickable
     public void ResetItem() {
         transform.position = startPosition;
         GetComponent<BoxCollider2D>().enabled = true;
+        rigidbody.gravityScale = 1;
     }
 }
