@@ -90,6 +90,7 @@ public class Piston : MonoBehaviour
         } else{
             score = 100;
         }
+<<<<<<< HEAD
 
         //Set Score to UI
         OrderScoreText.text = score+"%";
@@ -97,5 +98,12 @@ public class Piston : MonoBehaviour
 
     public void Empty() {
 
+=======
+    }
+    public void Empty() {
+        duck = null;
+        done = false;
+        speed = 20;
+>>>>>>> 2b39432bb24146dbe6b6eb3c3824b68223750b64
     }
 }

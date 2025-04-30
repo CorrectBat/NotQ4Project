@@ -24,4 +24,8 @@ public class AccessoryDuck : MonoBehaviour
             Debug.Log(collision.transform.GetComponent<AccessoryItem>().GetItem());
         }
     }
+
+    public List<ItemNames> GetItems() {
+        return items;
+    }
 }

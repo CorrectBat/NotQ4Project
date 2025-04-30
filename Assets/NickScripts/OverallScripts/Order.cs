@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    private List<ItemNames> itemReq;
-    private DuckColors color;
+    public List<ItemNames> itemReq;
+    public DuckColors color;
+    public TailShapes shape;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    void AssignReqs(List<ItemNames> items, DuckColors duckColor) {
+    public void AssignColor(DuckColors color)
+    {
+        this.color = color;
+    }
+
+    public void AssignItems(List<ItemNames> items) {
         itemReq = items;
-        color = duckColor;
+    }
+    public void AssignTailShape(TailShapes tailShape)
+    {
+        shape = tailShape;
     }
     
     // Update is called once per frame
