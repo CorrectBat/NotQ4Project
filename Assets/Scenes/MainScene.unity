@@ -372,6 +372,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Items
       objectReference: {fileID: 0}
+    - target: {fileID: 5010431096926105395, guid: 3952f5c1e0ba014448dd5cb0f7029038, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010431096926105395, guid: 3952f5c1e0ba014448dd5cb0f7029038, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5638522090097622312, guid: 3952f5c1e0ba014448dd5cb0f7029038, type: 3}
       propertyPath: m_Name
       value: Accessories
@@ -384,6 +392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprites
       objectReference: {fileID: 0}
+    - target: {fileID: 8952277890282628367, guid: 3952f5c1e0ba014448dd5cb0f7029038, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -385247838976573721, guid: e76cc46e4e0345d44aaafd535434fa14, type: 3}
     - target: {fileID: 9143952413779613209, guid: 3952f5c1e0ba014448dd5cb0f7029038, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1876965
@@ -1091,7 +1103,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1369873865523712594, guid: bb86cd46d6c8e7647ab8c0e6d118ac6f, type: 3}
       propertyPath: m_Name
-      value: Canvas2
+      value: Canvas3
       objectReference: {fileID: 0}
     - target: {fileID: 1369873865523712594, guid: bb86cd46d6c8e7647ab8c0e6d118ac6f, type: 3}
       propertyPath: m_IsActive
