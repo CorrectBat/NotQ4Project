@@ -6,8 +6,6 @@ public class Customer : MonoBehaviour
 {
     public bool isReadyToOrder;
     public Order order;
-
-    // Update is called once per frame
     public Order GetOrder()
     {
         return order;

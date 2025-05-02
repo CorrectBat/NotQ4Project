@@ -7,5 +7,4 @@ public enum TailShapes
     tiny,
     medium,
     large,
-    failed,
 }

@@ -19,8 +19,4 @@ public class ButtonClick : MonoBehaviour
     public void tail3ButtonClick(){
         duck.name = "Duck_tail3";
     }
-
-    public void testing(){
-        Debug.Log("testing");
-    }
 }

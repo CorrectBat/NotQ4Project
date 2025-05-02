@@ -9,7 +9,6 @@ public class Button : MonoBehaviour, Clickable
     [SerializeField] float needAmount;
     [SerializeField] Bucket bucket;
     [SerializeField] Pourer pourer;
-    [SerializeField] DuckColors color;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +24,7 @@ public class Button : MonoBehaviour, Clickable
 
     public void OnClick() {
         if(CanPress()) {
-            bucket.SetColor(materialColor, color);
+            bucket.SetColor(materialColor);
             bucket.setNeededAmount(needAmount);
             pourer.SetLiquidColor(materialColor);
         }

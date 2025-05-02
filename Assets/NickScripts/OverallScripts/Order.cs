@@ -7,6 +7,11 @@ public class Order : MonoBehaviour
     public List<ItemNames> itemReq;
     public DuckColors color;
     public TailShapes shape;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     public void AssignColor(DuckColors color)
     {
@@ -19,5 +24,11 @@ public class Order : MonoBehaviour
     public void AssignTailShape(TailShapes tailShape)
     {
         shape = tailShape;
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class ColorPickerSubmitButton : MonoBehaviour, Clickable
 {
-    [SerializeField] ColorStation station;
-    [SerializeField] Bucket bucket;
-
+    // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    // Update is called once per frame
     void Update()
     {
         
     }
 
-    void SendDuck() {
-        station.SendDuck();
-    }
     public void OnClick() {
-        if(bucket.GetAmountFilled() > 0) {
-            SendDuck();
-        }
+        
     }
 
     public void OnRelease() {
