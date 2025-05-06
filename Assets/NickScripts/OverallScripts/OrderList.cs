@@ -3,12 +3,19 @@ using UnityEngine;
 
 public class OrderList : MonoBehaviour
 {
+<<<<<<< HEAD
     public Customer currentCustomer;
     public CustomerManager customerManager;
 
     private List<Order> activeOrders = new List<Order>();
 
     public void SetCurrentCustomer(Customer customer)
+=======
+    List<Order> orders;
+
+    // Start is called before the first frame update
+    void Start()
+>>>>>>> 2b12f31e00d436595e45ce1bf2380524995baa4d
     {
         currentCustomer = customer;
         customer.isReadyToOrder = true;
@@ -16,6 +23,7 @@ public class OrderList : MonoBehaviour
         Debug.Log("Customer set: " + customer.name);
     }
 
+<<<<<<< HEAD
     public void AddOrder()
     {
         if (currentCustomer != null && currentCustomer.isReadyToOrder)
@@ -48,4 +56,11 @@ public class OrderList : MonoBehaviour
     {
         return activeOrders;
     }
+=======
+    void AddOrder(Order order) {
+        orders.Add(order);
+    }
+
+    
+>>>>>>> 2b12f31e00d436595e45ce1bf2380524995baa4d
 }
