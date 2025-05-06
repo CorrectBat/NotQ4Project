@@ -4,23 +4,17 @@ using UnityEngine;
 
 public class OrderList : MonoBehaviour
 {
-    public List<Order> orders;
+    List<Order> orders;
 
     // Start is called before the first frame update
-    public void Start()
+    void Start()
     {
         orders = new List<Order>();
     }
 
-    public void AddOrder(Order order) 
-    {
-        Instantiate(order);
-        order.AssignColor(DuckColors.blue);
-        List<ItemNames> items = new List<ItemNames>();
-        order.AssignItems(items);
-        order.AssignTailShape(TailShapes.tiny);
+    void AddOrder(Order order) {
         orders.Add(order);
     }
 
-        
+    
 }
