@@ -17,5 +17,9 @@ public class ButtonScript : MonoBehaviour
                 duck.name = "Duck_tail3";
             }
         }
-    } 
+    }
+
+    public Sprite[] finishedDucks;
+    public Sprite failedDuck;
+    
 }
