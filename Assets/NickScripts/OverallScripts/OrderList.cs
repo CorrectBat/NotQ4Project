@@ -1,26 +1,51 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OrderList : MonoBehaviour
 {
-    public List<Order> orders;
+    public Customer currentCustomer;
+    public CustomerManager customerManager;
 
-    // Start is called before the first frame update
-    public void Start()
+    private List<Order> activeOrders = new List<Order>();
+
+    public void SetCurrentCustomer(Customer customer)
     {
-        orders = new List<Order>();
+        currentCustomer = customer;
+        customer.isReadyToOrder = true;
+        Debug.Log("Set current customer: " + customer.name);
+        Debug.Log("Customer set: " + customer.name);
     }
 
-    public void AddOrder(Order order) 
+    public void AddOrder()
     {
-        Instantiate(order);
-        order.AssignColor(DuckColors.blue);
-        List<ItemNames> items = new List<ItemNames>();
-        order.AssignItems(items);
-        order.AssignTailShape(TailShapes.tiny);
-        orders.Add(order);
+        if (currentCustomer != null && currentCustomer.isReadyToOrder)
+        {
+            Order order = currentCustomer.GetOrder();
+
+            if (order != null)
+            {
+                activeOrders.Add(order);
+                Debug.Log("Order added: " + order);
+
+                currentCustomer.isReadyToOrder = false;
+                currentCustomer = null;
+
+                // Start next customer after delay
+                customerManager.OnOrderTaken();
+            }
+            else
+            {
+                Debug.LogWarning("Customer order is empty!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("No customer is ready to order!");
+        }
     }
 
-        
+    public List<Order> GetActiveOrders()
+    {
+        return activeOrders;
+    }
 }
