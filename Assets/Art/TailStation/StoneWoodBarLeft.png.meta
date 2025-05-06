@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StoneWoodBarLeft_0: 6084797910867830994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
