@@ -62,7 +62,7 @@ public class CustomerManager : MonoBehaviour
         if (customer != null)
         {
             customer.isReadyToOrder = true;
-            orderManager.SetCurrentCustomer(customer);
+            //orderManager.SetCurrentCustomer(customer);
             Debug.Log("Customer ready: " + customer.name);
         }
     }

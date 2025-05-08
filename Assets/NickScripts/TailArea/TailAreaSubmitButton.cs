@@ -18,7 +18,9 @@ public class TailAreaSubmitButton : MonoBehaviour, Clickable
     }
 
     public void OnClick() {
+        Debug.Log("hi1");
         if(tailArea.GetLiquidDuck().HasTail()) {
+            Debug.Log("hi2");
             tailArea.SendDuck();
         }
     }
