@@ -9,11 +9,9 @@ public class AccessoryItem : MonoBehaviour, Clickable
     private Rigidbody2D rigidbody;
     [SerializeField] ItemNames itemType;
     private bool isStuck;
-    private Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
-        startPosition = transform.position;
         rigidbody = transform.GetComponent<Rigidbody2D>();
     }
 
@@ -64,11 +62,5 @@ public class AccessoryItem : MonoBehaviour, Clickable
             GetComponent<BoxCollider2D>().enabled = false;
             isStuck = true;
         }
-    }
-
-    public void ResetItem() {
-        transform.position = startPosition;
-        GetComponent<BoxCollider2D>().enabled = true;
-        rigidbody.gravityScale = 1;
     }
 }

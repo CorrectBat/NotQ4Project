@@ -29,33 +29,18 @@ public class Duck : MonoBehaviour
     public void SetColor(DuckColors newColor, float score) {
         color = newColor;
         Debug.Log(newColor);
-        colorScore = score;
+        tailScore = score;
         Debug.Log(score);
     }
 
-    public void AddItems(List<ItemNames> items) {
-        this.items = items;
-    }
-
-    public List<ItemNames> GetItems() {
-        return items;
-    }
-
-    public TailShapes GetTailShape() {
-        return tailShape;
+    public void AddItem(ItemNames item) {
+        items.Add(item);
     }
 
     public void SetTail(TailShapes tail) {
         tailShape = tail;
     } 
 
-    public float GetColorScore() {
-        return colorScore;
-    }
-
-    public float GetTailScore() {
-        return tailScore;
-    }
     // Update is called once per frame
     void Update()
     {

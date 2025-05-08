@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ItemNames {
     topHat,
-    candyCane,
+    glasses,
     pirateHat,
     tape,
     unicornHorn,
