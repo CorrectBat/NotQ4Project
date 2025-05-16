@@ -18,9 +18,9 @@ public class AccessorySubmitButton : MonoBehaviour, Clickable
     }
 
     public void OnClick() {
-        if(area.HasDuck()) {
+        /*if(area.HasDuck()) {
             area.Restart();
-        }
+        }*/
     }
 
     public void OnRelease() {

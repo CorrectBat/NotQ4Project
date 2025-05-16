@@ -37,7 +37,7 @@ public class Score : MonoBehaviour
     }
 
     public void calcScore(Order order, Duck duck) {
-        if(order.color == duck.GetColor()) {
+        /*if(order.color == duck.GetColor()) {
             scores[1] = duck.GetColorScore();
         } else {
             scores[1] = 0;
@@ -67,5 +67,6 @@ public class Score : MonoBehaviour
         }
 
         scores[3] = Math.Max(0, scores[3]);
+        */
     }
 }
