@@ -1,25 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    private List<ItemNames> itemReq;
-    private DuckColors color;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<ItemNames> itemReq;
+    public DuckColors color;
+    public TailShapes tail;
 
-    void AssignReqs(List<ItemNames> items, DuckColors duckColor) {
+    // Assign values manually in inspector OR call this function during setup
+    public void AssignReqs(List<ItemNames> items, DuckColors duckColor, TailShapes tailshape)
+    {
         itemReq = items;
         color = duckColor;
+        tail = tailshape;
+        Debug.Log("Order assigned with Color: " + color + ", Tail: " + tail + ", Items: " + ItemToString());
     }
-    
-    // Update is called once per frame
-    void Update()
+
+    public string ItemToString()
     {
-        
+        if (itemReq == null || itemReq.Count == 0)
+        {
+            return "No accessories";
+        }
+        return string.Join(", ", itemReq);
     }
 }

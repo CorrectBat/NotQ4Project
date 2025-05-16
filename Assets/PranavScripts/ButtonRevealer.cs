@@ -20,7 +20,7 @@ public class ButtonRevealer : MonoBehaviour
         }
     }
 
-    void RevealButton()
+    public void RevealButton()
     {
         if (buttonToReveal != null)
         {

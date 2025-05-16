@@ -56,7 +56,7 @@ public class CustomerManager : MonoBehaviour
         }
     }
 
-    private void SetCustomerReady(GameObject customerGO)
+    public void SetCustomerReady(GameObject customerGO)
     {
         Customer customer = customerGO.GetComponent<Customer>();
         if (customer != null)

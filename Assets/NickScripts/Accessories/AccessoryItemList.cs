@@ -19,7 +19,7 @@ public class AccessoryItemList : MonoBehaviour
 
     public void Restart() {
         foreach(AccessoryItem item in items) {
-            item.ResetItem();
+            //item.ResetItem();
         }
     }
 }

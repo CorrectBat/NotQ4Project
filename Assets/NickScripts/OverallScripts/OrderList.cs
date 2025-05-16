@@ -1,29 +1,31 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OrderList : MonoBehaviour
 {
-<<<<<<< HEAD
     public Customer currentCustomer;
     public CustomerManager customerManager;
+    public OrderPickUp orderPickUp;
+    public UnityEngine.UI.Button takeOrderButton;
 
     private List<Order> activeOrders = new List<Order>();
+    private Order currentOrder;
 
     public void SetCurrentCustomer(Customer customer)
-=======
-    List<Order> orders;
-
-    // Start is called before the first frame update
-    void Start()
->>>>>>> 2b12f31e00d436595e45ce1bf2380524995baa4d
     {
         currentCustomer = customer;
-        customer.isReadyToOrder = true;
-        Debug.Log("Set current customer: " + customer.name);
-        Debug.Log("Customer set: " + customer.name);
+        StartCoroutine(RevealTakeOrderButtonAfterDelay());
     }
 
-<<<<<<< HEAD
+    private IEnumerator RevealTakeOrderButtonAfterDelay()
+    {
+        takeOrderButton.gameObject.SetActive(false);
+        yield return new WaitForSeconds(6f);
+        takeOrderButton.gameObject.SetActive(true);
+    }
+
     public void AddOrder()
     {
         if (currentCustomer != null && currentCustomer.isReadyToOrder)
@@ -33,12 +35,14 @@ public class OrderList : MonoBehaviour
             if (order != null)
             {
                 activeOrders.Add(order);
-                Debug.Log("Order added: " + order);
+                currentOrder = order;
+
+                orderPickUp.ShowOrder(order, currentCustomer.name);
+                takeOrderButton.gameObject.SetActive(false);
 
                 currentCustomer.isReadyToOrder = false;
                 currentCustomer = null;
 
-                // Start next customer after delay
                 customerManager.OnOrderTaken();
             }
             else
@@ -52,15 +56,20 @@ public class OrderList : MonoBehaviour
         }
     }
 
+    public void FulfillOrder()
+    {
+        if (currentOrder != null)
+        {
+            activeOrders.Remove(currentOrder);
+            orderPickUp.HideAllOrders();
+            Debug.Log("Order fulfilled!");
+            currentOrder = null;
+        }
+    }
+
     public List<Order> GetActiveOrders()
     {
         return activeOrders;
     }
-=======
-    void AddOrder(Order order) {
-        orders.Add(order);
-    }
-
-    
->>>>>>> 2b12f31e00d436595e45ce1bf2380524995baa4d
 }
+
